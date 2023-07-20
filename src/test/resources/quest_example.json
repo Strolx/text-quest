@@ -1,0 +1,26 @@
+[
+  {
+    "value": 0,
+    "type": "INTERMEDIATE",
+    "proposal": "Ты потерял память?\nПринять вызов НЛО?",
+    "option": "",
+    "firstOption": 1,
+    "secondOption": 2
+  },
+  {
+    "value": 1,
+    "type": "WINNING",
+    "proposal": "Ты принял вызов, молодец.",
+    "option": "Принять вызов",
+    "firstOption": null,
+    "secondOption": null
+  },
+  {
+    "value": 2,
+    "type": "LOSING",
+    "proposal": "Ты отклонил вызов.",
+    "option": "Отклонить вызов",
+    "firstOption": null,
+    "secondOption": null
+  }
+]

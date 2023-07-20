@@ -1,0 +1,58 @@
+[
+  {
+    "value": 0,
+    "type": "INTERMEDIATE",
+    "proposal": "Ты потерял память?\nПринять вызов НЛО?",
+    "option": "",
+    "firstOption": 1,
+    "secondOption": 2
+  },
+  {
+    "value": 1,
+    "type": "INTERMEDIATE",
+    "proposal": "Ты принял вызов.\nПоднимаешься на мостик к капитану?",
+    "option": "Принять вызов",
+    "firstOption": 3,
+    "secondOption": 4
+  },
+  {
+    "value": 2,
+    "type": "LOSING",
+    "proposal": "Ты отклонил вызов.",
+    "option": "Отклонить вызов",
+    "firstOption": null,
+    "secondOption": null
+  },
+  {
+    "value": 3,
+    "type": "INTERMEDIATE",
+    "proposal": "Ты поднялся на мостик.\nТы кто?",
+    "option": "Подняться на мостик",
+    "firstOption": 5,
+    "secondOption": 6
+  },
+  {
+    "value": 4,
+    "type": "LOSING",
+    "proposal": "Ты не пошел на переговоры.",
+    "option": "Отказаться подниматься на мостик",
+    "firstOption": null,
+    "secondOption": null
+  },
+  {
+    "value": 5,
+    "type": "WINNING",
+    "proposal": "Тебя вернули домой.",
+    "option": "Расказать правду о себе",
+    "firstOption": null,
+    "secondOption": null
+  },
+  {
+    "value": 6,
+    "type": "LOSING",
+    "proposal": "Твою ложь разоблачили.",
+    "option": "Солгать о себе",
+    "firstOption": null,
+    "secondOption": null
+  }
+]
