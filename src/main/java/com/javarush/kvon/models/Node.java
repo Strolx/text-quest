@@ -14,7 +14,7 @@ public class Node {
 
     private int value;
     @NonNull
-    private Type type;
+    private State state;
     @NonNull
     private String proposal;
     @NonNull
@@ -22,5 +22,6 @@ public class Node {
     private Node firstOption;
     private Node secondOption;
 
+    //Need for jackson
     private Node() {}
 }

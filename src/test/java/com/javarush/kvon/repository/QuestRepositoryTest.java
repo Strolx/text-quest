@@ -1,7 +1,7 @@
 package com.javarush.kvon.repository;
 
 import com.javarush.kvon.models.Node;
-import com.javarush.kvon.models.Type;
+import com.javarush.kvon.models.State;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.InvocationTargetException;
@@ -24,11 +24,11 @@ public class QuestRepositoryTest {
     @Test
     public void invokeReadStatesFromJSONFileCheckResult() {
 
-        Node firstOption = new Node(1, Type.WINNING,
+        Node firstOption = new Node(1, State.WINNING,
                 "Ты принял вызов, молодец.", "Принять вызов", null, null);
-        Node secondOption = new Node(2, Type.LOSING,
+        Node secondOption = new Node(2, State.LOSING,
                 "Ты отклонил вызов.", "Отклонить вызов", null, null);
-        Node start = new Node(0, Type.INTERMEDIATE,
+        Node start = new Node(0, State.INTERMEDIATE,
                 "Ты потерял память?\nПринять вызов НЛО?", "", firstOption, secondOption);
 
         List<Node> nodes = new ArrayList<>();

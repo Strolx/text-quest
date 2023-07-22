@@ -4,6 +4,7 @@ import com.javarush.kvon.exceptions.IllegalOptionValueException;
 import com.javarush.kvon.exceptions.NullStateOfQuestException;
 import com.javarush.kvon.models.Node;
 import com.javarush.kvon.models.Quest;
+import com.javarush.kvon.models.State;
 import com.javarush.kvon.repository.QuestRepository;
 import lombok.NonNull;
 import lombok.extern.log4j.Log4j2;
@@ -24,7 +25,7 @@ public class QuestService {
     }
 
     public String getProposal() {
-        return quest.getProposal();
+        return quest.getProposal().replace("\n", "<br>");
     }
 
     public String getTextFirstOption() {
@@ -61,7 +62,11 @@ public class QuestService {
     }
 
     public String getResultOfQuest() {
-        return quest.getResultOfQuest().getText();
+        return quest.getStateOfQuest().getText();
+    }
+
+    public State getStateOfQuest() {
+        return quest.getStateOfQuest();
     }
 
 }

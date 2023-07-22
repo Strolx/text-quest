@@ -21,10 +21,16 @@ public class QuestRepository {
     private final Quest quest;
 
     public QuestRepository() {
-        String pathToQuestFile = getClass().getResource("/quest.json").getPath();
-        List<Node> statesOfQuest = readStatesFromJSONFile(pathToQuestFile);
-        Node start = statesOfQuest.get(0);
-        quest = new Quest(start);
+
+        try {
+            String pathToQuestFile = getClass().getResource("/quest.json").getPath();
+            List<Node> statesOfQuest = readStatesFromJSONFile(pathToQuestFile);
+            Node start = statesOfQuest.get(0);
+            quest = new Quest(start);
+        } catch (NullPointerException e) {
+            log.error("During the attempt didn't find path to quest file.\n" + e.getMessage());
+            throw e;
+        }
     }
 
     private static List<Node> readStatesFromJSONFile(@NonNull String pathToQuestFile) {

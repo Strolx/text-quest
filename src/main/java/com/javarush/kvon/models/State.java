@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum Type {
+public enum State {
     INTERMEDIATE(""), WINNING("Победа"), LOSING("Поражение");
     private final String text;
 }

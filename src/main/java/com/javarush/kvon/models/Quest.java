@@ -19,7 +19,7 @@ public class Quest {
     }
 
     public boolean IsQuestOver() {
-        return !Type.INTERMEDIATE.equals(currentState.getType());
+        return !State.INTERMEDIATE.equals(currentState.getState());
     }
 
     public String getProposal() {
@@ -52,8 +52,8 @@ public class Quest {
         return currentState.getSecondOption();
     }
 
-    public Type getResultOfQuest() {
-        return currentState.getType();
+    public State getStateOfQuest() {
+        return currentState.getState();
     }
 
 }

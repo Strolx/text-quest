@@ -7,15 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class QuestTest {
 
     private final Node firstOption = new Node(2,
-            Type.WINNING, "Winning", "First option", null, null);
+            State.WINNING, "Winning", "First option", null, null);
     private final Node secondOption = new Node(3,
-            Type.LOSING, "Losing", "Second option", null, null);
+            State.LOSING, "Losing", "Second option", null, null);
 
     private final int value = 1;
-    private final Type type = Type.INTERMEDIATE;
+    private final State state = State.INTERMEDIATE;
     private final String proposal = "What the option will you choose?";
     private final String option = "";
-    private final Node start = new Node(value, type, proposal, option, firstOption, secondOption);
+    private final Node start = new Node(value, state, proposal, option, firstOption, secondOption);
 
     @Test
     public void createInstanceWhenParametersIsCorrect() {
@@ -31,7 +31,7 @@ public class QuestTest {
     @Test
     public void invokeIsQuestOver() {
         Quest quest = new Quest(start);
-        boolean isQuestOver = start.getType() != Type.INTERMEDIATE;
+        boolean isQuestOver = start.getState() != State.INTERMEDIATE;
         assertEquals(isQuestOver, quest.IsQuestOver());
 
         quest = new Quest(firstOption);

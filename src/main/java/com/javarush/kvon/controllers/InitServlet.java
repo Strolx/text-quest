@@ -15,17 +15,23 @@ import java.io.IOException;
 public class InitServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
         HttpSession session = req.getSession(true);
+
         String ipAddress = req.getHeader("X-FORWARDED-FOR");
         if (ipAddress == null) {
             ipAddress = req.getRemoteAddr();
         }
+
         session.setAttribute("name", req.getParameter("name"));
         session.setAttribute("ipAddress", ipAddress);
         session.setAttribute("numberOfPlayedGames", 0);
         session.setAttribute("numberOfGamesWon", 0);
         session.setAttribute("quest", new QuestService());
+
         log.info("Parameters for sessionID: " + session.getId() + " were initialized.\n Quest started.");
+
         resp.sendRedirect("/quest");
+
     }
 }

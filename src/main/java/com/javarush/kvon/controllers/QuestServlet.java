@@ -23,12 +23,19 @@ public class QuestServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         HttpSession session = req.getSession();
+
         int answer = Integer.parseInt(req.getParameter("answer"));
+
         QuestService questService = (QuestService) session.getAttribute("quest");
         questService.passToOption(answer);
+
         log.info("User from sessionId " + session.getId() + " made the choice.");
+
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/quest.jsp");
         requestDispatcher.forward(req, resp);
+
     }
+
 }

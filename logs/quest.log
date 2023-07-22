@@ -1,1 +1,61 @@
-2023-07-20 06:36:20,826 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:56:29,205 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,224 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,225 WARN com.javarush.kvon.models.Quest: Attempt to get option from final state of quest.
+2023-07-22 00:56:29,227 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,230 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,230 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,233 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,233 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,235 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,239 WARN com.javarush.kvon.models.Quest: Attempt to get option from final state of quest.
+2023-07-22 00:56:29,527 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:56:29,536 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:56:29,540 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,546 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:56:29,548 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,552 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:56:29,555 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,563 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:56:29,565 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:56:29,571 ERROR com.javarush.kvon.repository.QuestRepository: Can't read data from file.
+Unrecognized field "type" (class com.javarush.kvon.models.Node), not marked as ignorable (6 known properties: "value", "proposal", "option", "secondOption", "state", "firstOption"])
+ at [Source: (File); line: 4, column: 14] (through reference chain: java.util.ArrayList[0]->com.javarush.kvon.models.Node["type"])
+2023-07-22 00:58:26,526 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,538 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,538 WARN com.javarush.kvon.models.Quest: Attempt to get option from final state of quest.
+2023-07-22 00:58:26,541 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,544 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,544 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,547 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,547 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,549 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,549 WARN com.javarush.kvon.models.Quest: Attempt to get option from final state of quest.
+2023-07-22 00:58:26,838 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,839 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,845 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,850 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,859 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,859 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,860 ERROR com.javarush.kvon.services.QuestService: Attempt to set state of quest on null
+State of quest can't be null
+2023-07-22 00:58:26,860 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,865 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,865 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,867 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,873 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,873 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,874 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,879 INFO com.javarush.kvon.repository.QuestRepository: Data from file read successfully
+2023-07-22 00:58:26,879 INFO com.javarush.kvon.models.Quest: New quest is created
+2023-07-22 00:58:26,881 ERROR com.javarush.kvon.services.QuestService: Received value: 3
+Value of option isn't correct. Value has to be 1 or 2.

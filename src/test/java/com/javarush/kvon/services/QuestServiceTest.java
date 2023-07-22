@@ -4,7 +4,7 @@ import com.javarush.kvon.exceptions.IllegalOptionValueException;
 import com.javarush.kvon.exceptions.NullStateOfQuestException;
 import com.javarush.kvon.models.Node;
 import com.javarush.kvon.models.Quest;
-import com.javarush.kvon.models.Type;
+import com.javarush.kvon.models.State;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class QuestServiceTest {
 
-    private final Node firstOption = new Node(1, Type.WINNING,
+    private final Node firstOption = new Node(1, State.WINNING,
             "Ты принял вызов, молодец.", "Принять вызов", null, null);
-    private final Node secondOption = new Node(2, Type.LOSING,
+    private final Node secondOption = new Node(2, State.LOSING,
             "Ты отклонил вызов.", "Отклонить вызов", null, null);
-    private final Node start = new Node(0, Type.INTERMEDIATE,
+    private final Node start = new Node(0, State.INTERMEDIATE,
             "Ты потерял память?\nПринять вызов НЛО?", "", firstOption, secondOption);
     Quest quest =  new Quest(start);
 

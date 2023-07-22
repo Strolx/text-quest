@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class NodeTest {
 
     private final int value = 1;
-    private final Type type = Type.INTERMEDIATE;
+    private final State state = State.INTERMEDIATE;
     private final String proposal = "Question";
     private final String option = "Choose action";
     private final Node firstOption = null;
@@ -16,8 +16,8 @@ public class NodeTest {
 
     @Test
     public void createInstanceWhenParametersIsCorrect() {
-        Node node = new Node(value, type, proposal, option, firstOption, secondOption);
-        assertEquals(node, new Node(value, type, proposal, option, firstOption, secondOption));
+        Node node = new Node(value, state, proposal, option, firstOption, secondOption);
+        assertEquals(node, new Node(value, state, proposal, option, firstOption, secondOption));
     }
 
     @Test
@@ -27,11 +27,11 @@ public class NodeTest {
 
     @Test
     public void createInstanceWhenProposalIsNullCheckThrowException() {
-        assertThrows(NullPointerException.class, () -> new Node(value, type, null, option, firstOption, secondOption));
+        assertThrows(NullPointerException.class, () -> new Node(value, state, null, option, firstOption, secondOption));
     }
 
     @Test
     public void createInstanceWhenOptionIsNullCheckThrowException() {
-        assertThrows(NullPointerException.class, () -> new Node(value, type, proposal, null, firstOption, secondOption));
+        assertThrows(NullPointerException.class, () -> new Node(value, state, proposal, null, firstOption, secondOption));
     }
 }

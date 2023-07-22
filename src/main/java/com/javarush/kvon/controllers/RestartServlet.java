@@ -3,7 +3,6 @@ package com.javarush.kvon.controllers;
 import com.javarush.kvon.services.QuestService;
 import lombok.extern.log4j.Log4j2;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<!--Как связаны начальная страница приложения и index,jsp-->
 <html>
 <head>
     <title>Космические приключения</title>
@@ -24,10 +23,8 @@
 </div>
 <br>
 <form action="/start" method="get">
-<tr>
-    <td><input type = "text" name = "name"></td>
-    <td><input type = "submit" value = "Представиться"/></td>
-</tr>
+    <input type = "text" name = "name">
+    <input type = "submit" value = "Представиться"/>
 </form>
 </body>
 </html>

@@ -1,5 +1,4 @@
-<%@ page import="com.javarush.kvon.services.QuestService" %>
-<%@ page import="com.javarush.kvon.models.Type" %><%--
+<%@ page import="com.javarush.kvon.models.State" %><%--
   Created by IntelliJ IDEA.
   User: Admin
   Date: 11.07.2023
@@ -9,57 +8,55 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="styles/bottom-left.css" rel="stylesheet">
+    <link href="/styles/bottom-left.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <title>Title</title>
+    <title>Космические приключения</title>
 </head>
 <body>
-<c:set var="quest" value="<%= (QuestService) request.getSession().getAttribute(\"quest\")%>"/>
-<% if (!((QuestService) request.getSession().getAttribute("quest")).isQuestOver()) { %>
-<form action="/quest" method="post">
-    <h1><%= ((QuestService) request.getSession().getAttribute("quest")).getProposal().replace("\n", "<br>") %>
+
+<c:if test="${!sessionScope.quest.isQuestOver()}" var="isQuestNotOver" scope="request">
+    <form action="/quest" method="post">
+        <h1>
+            ${sessionScope.quest.getProposal()}
+        </h1>
+        <br>
+        <input type="radio" id="first_option" name="answer" value=1 checked>
+        <label for="first_option">
+            ${sessionScope.quest.getTextFirstOption()}
+        </label>
+        <br>
+        <input type="radio" id="second_option" name="answer" value=2>
+        <label for="second_option">
+            ${sessionScope.quest.getTextSecondOption()}
+        </label>
+        <br>
+        <input type="submit" value="Ответить"/>
+    </form>
+</c:if>
+<c:if test="${!requestScope.isQuestNotOver}">
+    <c:set var="numberOfPlayedGames" value="${sessionScope.numberOfPlayedGames+1}" scope="session"/>
+    <c:if test="${sessionScope.quest.getStateOfQuest() == State.WINNING}">
+        <c:set var="numberOfGamesWon" value="${sessionScope.numberOfGamesWon+1}" scope="session"/>
+    </c:if>
+    <h1>
+        ${sessionScope.quest.getProposal()}
     </h1>
-    <br>
-    <input type="radio" id="first_option" name="answer" value=1 checked>
-    <label for="first_option"><%= ((QuestService) request.getSession().getAttribute("quest")).getTextFirstOption() %>
-    </label>
-    <br>
-    <input type="radio" id="second_option" name="answer" value=2>
-    <label for="second_option"><%= ((QuestService) request.getSession().getAttribute("quest")).getTextSecondOption() %>
-    </label>
-    <br>
-    <input type="submit" value="Ответить"/>
-</form>
-<% } else {
-    HttpSession currentSession = request.getSession();
-    int numberOfPlayedGames = (Integer) currentSession.getAttribute("numberOfPlayedGames");
-    numberOfPlayedGames++;
-    currentSession.setAttribute("numberOfPlayedGames", numberOfPlayedGames);
-    QuestService quest = (QuestService) currentSession.getAttribute("quest");
-    String question = quest.getProposal();
-    String result = quest.getResultOfQuest();
-    if (result.equals(Type.WINNING.getText())) {
-        int numberOfGamesWon = (Integer) currentSession.getAttribute("numberOfGamesWon");
-        numberOfGamesWon++;
-        currentSession.setAttribute("numberOfGamesWon", numberOfGamesWon);
-    }%>
-<h1><%= question %>
-</h1>
-<h1><%= result %>
-</h1>
-<form action="/restart" method="post">
-    <input type="submit" value="Сыграть ещё раз"/>
-</form>
-<% } %>
+    <h1>
+        ${sessionScope.quest.getResultOfQuest()}
+    </h1>
+    <form action="/restart" method="post">
+        <input type="submit" value="Сыграть ещё раз"/>
+    </form>
+</c:if>
 <div id="bottom-left">
     <p>Статистика:</p>
-    <p>IP address: <%= request.getSession().getAttribute("ipAddress") %>
+    <p>IP address: ${sessionScope.ipAddress}
     </p>
-    <p>Имя в игре: <%= request.getSession().getAttribute("name") %>
+    <p>Имя в игре: ${sessionScope.name}
     </p>
-    <p>Количество игр: <%= request.getSession().getAttribute("numberOfPlayedGames") %>
+    <p>Количество игр: ${sessionScope.numberOfPlayedGames}
     </p>
-    <p>Количество побед: <%= request.getSession().getAttribute("numberOfGamesWon") %>
+    <p>Количество побед: ${sessionScope.numberOfGamesWon}
     </p>
 </div>
 </body>
